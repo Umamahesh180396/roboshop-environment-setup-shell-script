@@ -25,10 +25,10 @@ do
                 "Changes": [{
                 "Action": "CREATE",
                             "ResourceRecordSet": {
-                                "Name": "'$i."$DOMAIN_NAME'",
+                                "Name": "'$i.$DOMAIN_NAME'",
                                 "Type": "A",
                                 "TTL": 300,
-                                "ResourceRecords": [{"Value": "'$IP_ADDRESS"}]
+                                "ResourceRecords": [{"Value": "'$IP_ADDRESS'"}]
                             }}]
     }
     '
