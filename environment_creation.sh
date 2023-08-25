@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-NAMES=("MongoDB-Catalogue-User" "Redis-Cart-User" "MySQL-Shipping" "RabbitMQ-Payments" "Catalogue-NodeJS" "Cart-NodeJS" "User-NodeJS" "Shipping-Java" "Payments-Python" "Nginx-Web")
+NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "cart" "user" "shipping" "payments" "web")
 INSTANCE_TYPE=""
 IMAGE_ID="ami-03265a0778a880afb"
 SECURITY_GROUP_ID="sg-0e658def150f1a79a"
 DOMAIN_NAME=robomart.cloud
 
-# MySQL-Shipping and MongoDB-Catalogue-User instance type shound be t3.medium, for rest t3.micro
+# mysql and mongodb instance type shound be t3.medium, for rest t3.micro
 for i in "${NAMES[@]}"
 do
-    if [[ $i == "MySQL-Shipping" || $i == "MongoDB-Catalogue-User" ]]
+    if [[ $i == "mysql" || $i == "mongodb" ]]
     then
         INSTANCE_TYPE="t3.medium" 
     else
